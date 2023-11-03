@@ -26,14 +26,5 @@ public class LeafTailedGeckoModel extends GeoModel<EntityLeafTailedGecko> {
         return new ResourceLocation(ScalesNTrails.MOD_ID, "animations/leafgecko.animation.json");
     }
 
-    @Override
-    public void setCustomAnimations(EntityLeafTailedGecko animatable, long instanceId, AnimationState<EntityLeafTailedGecko> animationState) {
-        CoreGeoBone head = getAnimationProcessor().getBone("head");
-        if (head != null) {
-            EntityModelData entityData = animationState.getData(DataTickets.ENTITY_MODEL_DATA);
 
-            head.setRotX(entityData.headPitch() * Mth.DEG_TO_RAD);
-            head.setRotY(entityData.netHeadYaw() * Mth.DEG_TO_RAD);
-        }
-    }
 }

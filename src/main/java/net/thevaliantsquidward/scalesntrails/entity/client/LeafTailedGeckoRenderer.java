@@ -12,6 +12,7 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer;
 public class LeafTailedGeckoRenderer extends GeoEntityRenderer<EntityLeafTailedGecko> {
     public LeafTailedGeckoRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new LeafTailedGeckoModel());
+        this.addRenderLayer(new LeafTailedGeckoEyesLayer(this));
     }
 
     @Override
