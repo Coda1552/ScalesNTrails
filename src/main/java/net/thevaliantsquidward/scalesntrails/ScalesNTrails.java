@@ -1,6 +1,7 @@
 package net.thevaliantsquidward.scalesntrails;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -11,6 +12,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.thevaliantsquidward.scalesntrails.entity.ModEntities;
+import net.thevaliantsquidward.scalesntrails.entity.client.LeafTailedGeckoRenderer;
 import org.slf4j.Logger;
 
 @Mod(ScalesNTrails.MOD_ID)
@@ -23,6 +26,8 @@ public class ScalesNTrails
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
+
+        ModEntities.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -52,7 +57,8 @@ public class ScalesNTrails
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register
+                    (ModEntities.LEAFGECKO.get(), LeafTailedGeckoRenderer:: new);
         }
     }
 }
