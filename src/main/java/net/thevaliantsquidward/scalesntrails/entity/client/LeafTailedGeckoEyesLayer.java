@@ -11,7 +11,7 @@ import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoRenderer;
 import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
-public class LeafTailedGeckoEyesLayer extends AutoGlowingGeoLayer<EntityLeafTailedGecko> {
+public class LeafTailedGeckoEyesLayer extends GeoRenderLayer<EntityLeafTailedGecko> {
     private static final ResourceLocation OVERLAY = new ResourceLocation(ScalesNTrails.MOD_ID, "textures/entity/leafgeckoglowingeyes.png");
     private static final ResourceLocation MODEL = new ResourceLocation(ScalesNTrails.MOD_ID, "geo/leafgecko.geo.json");
     public LeafTailedGeckoEyesLayer(GeoRenderer<EntityLeafTailedGecko> entityRendererIn) {
