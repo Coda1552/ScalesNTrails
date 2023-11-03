@@ -10,7 +10,7 @@ import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
 public class LeafTailedGeckoRenderer extends GeoEntityRenderer<EntityLeafTailedGecko> {
-    public LeafTailedGeckoRenderer(EntityRendererProvider.Context renderManager, GeoModel<EntityLeafTailedGecko> model) {
+    public LeafTailedGeckoRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new LeafTailedGeckoModel());
     }
 
@@ -22,7 +22,7 @@ public class LeafTailedGeckoRenderer extends GeoEntityRenderer<EntityLeafTailedG
     @Override
     public void render(EntityLeafTailedGecko entity, float entityYaw, float partialTick, PoseStack poseStack,
                        MultiBufferSource bufferSource, int packedLight) {
-        if (entity.isBaby()) {
+        if(entity.isBaby()) {
             poseStack.scale(0.4f, 0.4f, 0.4f);
         }
 

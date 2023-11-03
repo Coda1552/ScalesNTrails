@@ -54,7 +54,7 @@ public class EntityLeafTailedGecko extends Animal implements GeoEntity {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-        return ModEntities.LEAFGECKO.get().create(level());
+        return ModEntities.LEAF_TAILED_GECKO.get().create(level());
     }
 
     @Override

@@ -91,7 +91,7 @@
 						"vector": ["2.5+math.cos((query.anim_time - 0.4)* 360)*9", 0, "0+math.cos((query.anim_time - 0.4)* 360)*4"]
 					}
 				},
-				"bone2": {
+				"head": {
 					"rotation": {
 						"vector": ["math.cos((query.anim_time - 0.4)* 360)*2", 0, "math.cos((query.anim_time - 0.4)* 360)*2"]
 					}
@@ -99,14 +99,14 @@
 			}
 		},
 		"animation.model.new2": {
-			"loop": true,
+			"animation_length": 1,
 			"bones": {
 				"bone": {
 					"rotation": {
 						"vector": [10, 0, 0]
 					}
 				},
-				"bone2": {
+				"head": {
 					"rotation": {
 						"vector": [-19.04514, -9.06524, -12.0012]
 					}

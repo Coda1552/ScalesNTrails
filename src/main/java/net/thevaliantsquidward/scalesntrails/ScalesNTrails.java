@@ -58,7 +58,7 @@ public class ScalesNTrails
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register
-                    (ModEntities.LEAFGECKO.get(), LeafTailedGeckoRenderer:: new);
+                    (ModEntities.LEAF_TAILED_GECKO.get(), LeafTailedGeckoRenderer:: new);
         }
     }
 }

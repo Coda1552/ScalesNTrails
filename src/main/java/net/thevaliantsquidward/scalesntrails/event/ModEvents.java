@@ -11,6 +11,6 @@ import net.thevaliantsquidward.scalesntrails.entity.custom.EntityLeafTailedGecko
 public class ModEvents {
 @SubscribeEvent
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-   event.put(ModEntities.LEAFGECKO.get(), EntityLeafTailedGecko.setAttributes());
+   event.put(ModEntities.LEAF_TAILED_GECKO.get(), EntityLeafTailedGecko.setAttributes());
     }
 }
