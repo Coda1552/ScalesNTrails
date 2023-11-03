@@ -6,8 +6,8 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.thevaliantsquidward.scalesntrails.ScalesNTrails;
 import net.thevaliantsquidward.scalesntrails.entity.custom.EntityLeafTailedGecko;
-import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
+import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 
 public class LeafTailedGeckoRenderer extends GeoEntityRenderer<EntityLeafTailedGecko> {
     public LeafTailedGeckoRenderer(EntityRendererProvider.Context renderManager) {
