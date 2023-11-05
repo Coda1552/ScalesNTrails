@@ -13,7 +13,7 @@ public class LeafTailedGeckoRenderer extends GeoEntityRenderer<EntityLeafTailedG
     public LeafTailedGeckoRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new LeafTailedGeckoModel());
         this.addRenderLayer(new LeafTailedGeckoEyesLayer(this));
-        this.addRenderLayer(new AutoGlowingGeoLayer<EntityLeafTailedGecko>(this));
+        //this.addRenderLayer(new AutoGlowingGeoLayer<EntityLeafTailedGecko>(this));
     }
 
     @Override

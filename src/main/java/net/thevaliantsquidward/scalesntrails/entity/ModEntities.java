@@ -17,7 +17,7 @@ public class ModEntities {
     public static final RegistryObject<EntityType<EntityLeafTailedGecko>> LEAF_TAILED_GECKO =
             ENTITY_TYPES.register("leaf_tailed_gecko",
                     () -> EntityType.Builder.of(EntityLeafTailedGecko::new, MobCategory.CREATURE)
-                            .sized(1.5f, 1.75f)
+                            .sized(1f, 1f)
                             .build(new ResourceLocation(ScalesNTrails.MOD_ID, "leaf_tailed_gecko").toString()));
 
     public static void register(IEventBus eventBus) {
