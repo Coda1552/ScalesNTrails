@@ -20,8 +20,6 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, ScalesNTrails.MOD_ID);
 
 
-    public static final RegistryObject<Block> LEAF_LITTER = registerBlock("leaf_litter",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_CARPET).sound(SoundType.VINE).randomTicks().noOcclusion().noCollission()));
 
 
 
