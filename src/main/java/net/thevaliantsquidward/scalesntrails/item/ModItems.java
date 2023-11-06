@@ -16,6 +16,9 @@ public class ModItems {
     public static final RegistryObject<Item> LEAF_GECKO_SPAWN_EGG = ITEMS.register("leaf_gecko_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.LEAF_TAILED_GECKO, 0x5e432d, 0x332d28, new Item.Properties()));
 
+    public static final RegistryObject<Item> VINE_SNAKE_SPAWN_EGG = ITEMS.register("vine_snake_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.VINE_SNAKE, 0x82a949, 0x48623e, new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
