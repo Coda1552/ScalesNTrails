@@ -20,54 +20,36 @@ import net.thevaliantsquidward.scalesntrails.item.ModItems;
 import org.slf4j.Logger;
 
 @Mod(ScalesNTrails.MOD_ID)
-public class ScalesNTrails
-{
+public class ScalesNTrails {
     public static final String MOD_ID = "scalesntrails";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public ScalesNTrails()
-    {
+
+    public ScalesNTrails() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::addCreative);
 
         ModEntities.register(modEventBus);
-
         ModItems.register(modEventBus);
-
         ModBlocks.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
-        modEventBus.addListener(this::addCreative);
-
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
-
+    private void commonSetup(final FMLCommonSetupEvent event) {
     }
 
-
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
     }
 
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
 
-    }
-
-        @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-            EntityRenderers.register
-                    (ModEntities.LEAF_TAILED_GECKO.get(), LeafTailedGeckoRenderer:: new);
-            EntityRenderers.register
-                    (ModEntities.VINE_SNAKE.get(), VineSnakeRenderer:: new);
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.LEAF_TAILED_GECKO.get(), LeafTailedGeckoRenderer:: new);
+            EntityRenderers.register(ModEntities.VINE_SNAKE.get(), VineSnakeRenderer:: new);
         }
     }
 }
